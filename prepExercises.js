@@ -33,7 +33,7 @@ return result;
 
 
 // 3.Repeating a String n Times: Let's write a function called repeatString that takes two parameters: a string str, which is the string to be repeated, and count -- a number representing how many times the string s should be repeated, e.g.
- // var string      then as long as i don't pass the count, and if count isnt equal to 0 the variable string will receive the previous value and the new str then i++ to repeat the  
+ // var string      then as long as i don't pass the count, and if count isnt equal to 0 the variable string will receive the previous value and the new str then i++ to repeat the process until it reaches the count . 
  function repeatString(str, count) { 
  	var i = 0 
  	var string =''
@@ -59,7 +59,19 @@ return result;
 
 // More Practice
 // 1.Go back through any of the exercises done in the introduction to repetition and refactor them to use the while loop.
-
+function range(n1,n2){
+	var i = n1
+	var string =''
+	while(i<n2){ 
+		if(n1===n2){
+			return n1
+		} else {
+			string = string + i + ','
+			i++
+		}
+	}
+	return string;
+}
 
 // 2.Fencepost Loop: Use a while loop to build a single string with the numbers 1 through n, separated by commas. Have it return the new string. How can we make sure not to have a comma after the last number?
 //  function counting(n) { 
@@ -68,7 +80,19 @@ return result;
 //  counting(5); // => '1, 2, 3, 4, 5' 
 //  counting(1); // => '1' 
 //  counting(3); // => '1, 2, 3'
-
+function counting(n){
+	var total = 0
+	var i=1 
+	while(i<n){
+		if (n===1){
+			return 1 
+		} else {
+			total = total + i + ','
+            i++
+		}
+	}
+	return total;  
+}
 
 
 
@@ -84,9 +108,16 @@ return result;
 
 
 // 4.Reverse String: Write a function that takes a string as an input and returns the reverse of that string.
-//  function reverseString(str) { 
-//        // TODO: your code here 
-//  } 
+ function reverseString(str) { 
+ 	var string = ''
+ 	var i=str.length-1
+ 	while(i>=0){
+ 	 string = string + str[i]
+ 	}
+ 	return string;
+ }	
+  
+ 
 //  reverseString('hello'); // => 'olleh' 
 //  reverseString('1#*$'); // => '$*#1'
 // Do this using a while loop.

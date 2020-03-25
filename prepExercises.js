@@ -70,7 +70,7 @@ function range(n1,n2){
 			i++
 		}
 	}
-	return string;
+	return string.slice(string.length-1);
 }
 
 // 2.Fencepost Loop: Use a while loop to build a single string with the numbers 1 through n, separated by commas. Have it return the new string. How can we make sure not to have a comma after the last number?
@@ -81,7 +81,7 @@ function range(n1,n2){
 //  counting(1); // => '1' 
 //  counting(3); // => '1, 2, 3'
 function counting(n){
-	var total = 0
+	var total = ''
 	var i=1 
 	while(i<n){
 		if (n===1){
@@ -91,7 +91,7 @@ function counting(n){
             i++
 		}
 	}
-	return total;  
+	return total.slice(0,total.length-1);  
 }
 
 
@@ -113,6 +113,7 @@ function counting(n){
  	var i=str.length-1
  	while(i>=0){
  	 string = string + str[i]
+ 	 i--
  	}
  	return string;
  }	
@@ -126,7 +127,43 @@ function counting(n){
 
 // 5.Write a javascript program to print all Prime numbers from 1 to n.
 
+/*function Js(n){
+	var total = ''
+   for (var i=2 ; i<n ; i++){
+      if(n % i !==0){
+        total = total + i + ',' 
+        i++
+      }
+    }
+    return total.slice(total.length-1) ;
+}*/
+function isPrime(n){
+	var i= 2;
+	if (n<2){
+		return "choose again";
+	}
+	while (i < n){
+		if (n%i === 0){
+			return false;
+		} 
+		i++
+      
+}return true; 
+ }
+  function prime(n){
+	var i=2;
+	var result= '';
+	while (i<= n){
+		if (isPrime(i)){
+			result= result+ i+',';
+		}
+		i++;
+	}	
+	return result.slice(0,result.length-1);
+}  
 
+    
+ 	
 
 
 // 6.Write a JavaScript for loop that will iterate from 0 to n. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
@@ -135,11 +172,41 @@ function counting(n){
 //  '1 is odd' 
 //  '2 is even'
 
-
-
+/*function js(n){
+	var result= ''
+	var total = ''
+	var i = 0 
+	while(i<n){
+		if(i%2===0){
+		total = total + i + 'is even';
+	} else {
+		result = total + \n\\i + "is odd"
+	} 
+}
+return result ;
+}*/
+function check(n){
+   
+	for (var i=0; i<= n; i++){
+		if (i%2 === 0){
+			alert(i + ' is even');
+	} else {
+		alert( i +' is odd');
+	}
+	
+}
+}
 
 // 7.Write a javascript program to enter any number and print all factors of the number.
-
+ function js(n){
+	var total= ''
+	for (var i=0; i<=n ; i++){
+		if(n % i  === 0){
+			total = total + i +','
+		}
+	}
+	return total.slice(0,total.length-1);
+}
 
 
 

@@ -1,9 +1,14 @@
 // Exercises
 // Basic Requirments
 // 1.Summation to n: Let's implement the function sum that takes a single parameter n, and computes the sum of all integers up to n starting from 0, e.g.:
-//  function sum(n) { 
-//  // TODO: your code here 
-//  } 
+ function sum(n) { 
+ 	var result=0
+for (var i = 0 ; i<=n; i++){
+  result = result + i
+}
+return result;
+}
+
 //  sum(3); // => 6 
 //  sum(4); // => 10 
 //  sum(5); // => 15
@@ -11,8 +16,14 @@
 
 
 // 2.Factorial of n: The factorial of n is the product of all the integers preceding n, starting with 1, e.g.:
-//  function factorial(n) { 
-//  // TODO: your code here 
+ function factorial(n) { 
+ 	var result = 1
+ 	for (var i = 1; i<=n ; i++){
+        result = result * i
+ 	}
+ 	return result;
+ }
+
 //  } 
 //  factorial(3); // => 6 
 //  factorial(4); // => 24 
@@ -20,10 +31,23 @@
 
 
 
+
 // 3.Repeating a String n Times: Let's write a function called repeatString that takes two parameters: a string str, which is the string to be repeated, and count -- a number representing how many times the string s should be repeated, e.g.
-//  function repeatString(str, count) { 
-//  // TODO: your code here 
-//  } 
+ // var string      then as long as i don't pass the count, and if count isnt equal to 0 the variable string will receive the previous value and the new str then i++ to repeat the  
+ function repeatString(str, count) { 
+ 	var i = 0 
+ 	var string =''
+ 	while(i < count){
+       if(count===0){
+ 	      return '';
+ 	    } else {
+ 		  string = string + str
+ 		  i++
+ 		}
+ 	}
+   return string;
+}
+
 //  repeatString('dog', 0); // => '' 
 //  repeatString('dog', 1); // => 'dog' 
 //  repeatString('dog', 2); // => 'dogdog' 
